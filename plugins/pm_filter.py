@@ -64,7 +64,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"[❤️{get_size(file.file_size)}🖤] {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -157,7 +157,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('♥️ Love @LazyDeveloper ♥️')
+                    return await query.answer('♥️ Love fast movie ♥️')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
@@ -195,7 +195,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("That's not for you sona!", show_alert=True)
+                await query.answer("സ്വന്തമായി നോക്കൂ❤️!", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
@@ -762,7 +762,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("Hey Sona! Mujhe is naam se koi movie nhi mili, Mujhe lgta hai ki aapne spelling galat likh dii h 🤷‍♀️!\nPlease check your spelling once again 🤦‍♀️... or \n Discuss your problem with our admin here 👉 @discussion_groupp ")
+        k = await msg.reply("ഈ സിനിമയുടെ പേര് ഇങ്ങനെയൊന്നുമല്ലടാ അല്ലെങ്കിൽ ഇത് റിലീസ് ആയിട്ടു ഉണ്ടാവില്ല!\nPlease check your spelling once again 🤦‍♀️... or \n അല്ലെങ്കിൽ ബോസിനോട് ചോദിക്ക് 👉 @mrbhiman44 ")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -774,7 +774,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("Hey Sona! Mujhe is naam se koi movie nhi mili, Mujhe lgta hai ki aapne spelling galat likh dii h 🤷‍♀️!\nPlease check your spelling once again 🤦‍♀️... or \n Discuss your problem with our admin here 👉 @discussion_groupp ",
+    await msg.reply("ഈ സിനിമയുടെ പേര് ഇങ്ങനെയൊന്നുമല്ലടാ അല്ലെങ്കിൽ ഇത് റിലീസ് ആയിട്ടു ഉണ്ടാവില്ല!\nPlease check your spelling once again 🤦‍♀️... or \n അല്ലെങ്കിൽ ബോസിനോട് ചോദിക്ക് 👉 @mrbhiman44 ")
                     reply_markup=InlineKeyboardMarkup(btn))
 
 
